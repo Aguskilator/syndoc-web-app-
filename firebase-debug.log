@@ -1,0 +1,219 @@
+[debug] [2025-06-12T17:58:21.993Z] ----------------------------------------------------------------------
+[debug] [2025-06-12T17:58:21.997Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2025-06-12T17:58:21.997Z] CLI Version:   14.7.0
+[debug] [2025-06-12T17:58:21.997Z] Platform:      darwin
+[debug] [2025-06-12T17:58:21.997Z] Node Version:  v22.16.0
+[debug] [2025-06-12T17:58:21.998Z] Time:          Thu Jun 12 2025 11:58:21 GMT-0600 (hora estándar central)
+[debug] [2025-06-12T17:58:21.998Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-12T17:58:22.097Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-12T17:58:22.097Z] > authorizing via signed-in user (jagus2000@gmail.com)
+[debug] [2025-06-12T17:58:22.098Z] [iam] checking project medwiseai for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-06-12T17:58:22.098Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:22.098Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:22.099Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions [none]
+[debug] [2025-06-12T17:58:22.099Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T17:58:22.099Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-12T17:58:22.488Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions 200
+[debug] [2025-06-12T17:58:22.488Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-12T17:58:22.489Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:22.489Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:22.489Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-06-12T17:58:22.489Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-06-12T17:58:23.211Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions 503
+[debug] [2025-06-12T17:58:23.211Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":503,"message":"Policy checks are unavailable.","status":"UNAVAILABLE"}}
+[debug] [2025-06-12T17:58:23.212Z] [functions] service account IAM check errored, deploy may fail: Request to https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions had HTTP Error: 503, Policy checks are unavailable. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":503,"message":"Policy checks are unavailable.","status":"UNAVAILABLE"}},"response":{"statusCode":503}},"exit":2,"message":"Request to https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions had HTTP Error: 503, Policy checks are unavailable.","status":503}
+[info] 
+[info] === Deploying to 'medwiseai'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2025-06-12T17:58:26.073Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:26.073Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:26.073Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-06-12T17:58:26.073Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T17:58:28.002Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com 503
+[debug] [2025-06-12T17:58:28.003Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-06-12T17:58:28.004Z] Unable to check that https://cloudresourcemanager.googleapis.com is enabled on medwiseai. Calls to it will fail if it is not enabled
+[debug] [2025-06-12T17:58:28.006Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:28.006Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:28.006Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai [none]
+[debug] [2025-06-12T17:58:32.016Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai 200
+[debug] [2025-06-12T17:58:32.016Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai {"projectNumber":"758655856472","projectId":"medwiseai","lifecycleState":"ACTIVE","name":"MedWiseAI","labels":{"monospace-workspace-id":"studio-1145763673","firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-11T19:15:55.784315Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-06-12T17:58:32.019Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:32.019Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:32.019Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:32.019Z] Checked if tokens are valid: true, expires at: 1749752418277
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-06-12T17:58:32.020Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:32.020Z] Checked if tokens are valid: true, expires at: 1749752418277
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-06-12T17:58:32.020Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:32.020Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T17:58:32.021Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-06-12T17:58:32.021Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T17:58:32.023Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-06-12T17:58:32.023Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T17:58:32.026Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudbuild.googleapis.com [none]
+[debug] [2025-06-12T17:58:32.026Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudbuild.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T17:58:32.030Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/artifactregistry.googleapis.com [none]
+[debug] [2025-06-12T17:58:32.030Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/artifactregistry.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T17:58:34.475Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com 503
+[debug] [2025-06-12T17:58:34.476Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com [omitted]
+[error] 
+[error] Error: Request to https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com had HTTP Error: 503, Visibility check was unavailable. Please retry the request and contact support if the problem persists
+[debug] [2025-06-12T17:58:34.616Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "Visibility check was unavailable. Please retry the request and contact support if the problem persists",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503
+  }
+}
+[debug] [2025-06-12T18:00:21.840Z] ----------------------------------------------------------------------
+[debug] [2025-06-12T18:00:21.844Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2025-06-12T18:00:21.844Z] CLI Version:   14.7.0
+[debug] [2025-06-12T18:00:21.844Z] Platform:      darwin
+[debug] [2025-06-12T18:00:21.844Z] Node Version:  v22.16.0
+[debug] [2025-06-12T18:00:21.844Z] Time:          Thu Jun 12 2025 12:00:21 GMT-0600 (hora estándar central)
+[debug] [2025-06-12T18:00:21.844Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-12T18:00:21.934Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-12T18:00:21.934Z] > authorizing via signed-in user (jagus2000@gmail.com)
+[debug] [2025-06-12T18:00:21.934Z] [iam] checking project medwiseai for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-06-12T18:00:21.935Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T18:00:21.935Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T18:00:21.935Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions [none]
+[debug] [2025-06-12T18:00:21.935Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T18:00:21.935Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-12T18:00:25.902Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions 200
+[debug] [2025-06-12T18:00:25.903Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-12T18:00:25.903Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T18:00:25.903Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T18:00:25.903Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-06-12T18:00:25.903Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-06-12T18:00:26.907Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions 503
+[debug] [2025-06-12T18:00:26.908Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":503,"message":"Policy checks are unavailable.","status":"UNAVAILABLE"}}
+[debug] [2025-06-12T18:00:26.908Z] [functions] service account IAM check errored, deploy may fail: Request to https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions had HTTP Error: 503, Policy checks are unavailable. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":503,"message":"Policy checks are unavailable.","status":"UNAVAILABLE"}},"response":{"statusCode":503}},"exit":2,"message":"Request to https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions had HTTP Error: 503, Policy checks are unavailable.","status":503}
+[info] 
+[info] === Deploying to 'medwiseai'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2025-06-12T18:00:29.832Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T18:00:29.832Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T18:00:29.832Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-06-12T18:00:29.832Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T18:00:36.234Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-06-12T18:00:36.234Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-06-12T18:00:36.235Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T18:00:36.235Z] Checked if tokens are valid: true, expires at: 1749752418277
+[debug] [2025-06-12T18:00:36.235Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai [none]
+[debug] [2025-06-12T18:00:39.493Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai 503
+[debug] [2025-06-12T18:00:39.493Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai {"error":{"code":503,"message":"Visibility check was unavailable. Please retry the request and contact support if the problem persists","status":"UNAVAILABLE"}}
+[error] 
+[error] Error: Request to https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai had HTTP Error: 503, Visibility check was unavailable. Please retry the request and contact support if the problem persists
+[debug] [2025-06-12T18:00:39.641Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "Visibility check was unavailable. Please retry the request and contact support if the problem persists",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503
+  }
+}
+[debug] [2025-06-12T18:20:26.751Z] ----------------------------------------------------------------------
+[debug] [2025-06-12T18:20:26.756Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2025-06-12T18:20:26.757Z] CLI Version:   14.7.0
+[debug] [2025-06-12T18:20:26.757Z] Platform:      darwin
+[debug] [2025-06-12T18:20:26.757Z] Node Version:  v22.16.0
+[debug] [2025-06-12T18:20:26.757Z] Time:          Thu Jun 12 2025 12:20:26 GMT-0600 (hora estándar central)
+[debug] [2025-06-12T18:20:26.757Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-12T18:20:26.858Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-12T18:20:26.858Z] > authorizing via signed-in user (jagus2000@gmail.com)
+[debug] [2025-06-12T18:20:26.859Z] [iam] checking project medwiseai for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-06-12T18:20:26.859Z] Checked if tokens are valid: false, expires at: 1749752418277
+[debug] [2025-06-12T18:20:26.859Z] Checked if tokens are valid: false, expires at: 1749752418277
+[debug] [2025-06-12T18:20:26.859Z] > refreshing access token with scopes: []
+[debug] [2025-06-12T18:20:26.860Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-12T18:20:26.860Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-12T18:20:27.061Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-06-12T18:20:27.061Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-12T18:20:27.073Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions [none]
+[debug] [2025-06-12T18:20:27.074Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T18:20:27.074Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-12T18:20:32.376Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions 200
+[debug] [2025-06-12T18:20:32.376Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-12T18:20:32.377Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:32.377Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:32.377Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-06-12T18:20:32.377Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-06-12T18:20:37.850Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions 503
+[debug] [2025-06-12T18:20:37.850Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":503,"message":"Policy checks are unavailable.","status":"UNAVAILABLE"}}
+[debug] [2025-06-12T18:20:37.851Z] [functions] service account IAM check errored, deploy may fail: Request to https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions had HTTP Error: 503, Policy checks are unavailable. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":503,"message":"Policy checks are unavailable.","status":"UNAVAILABLE"}},"response":{"statusCode":503}},"exit":2,"message":"Request to https://iam.googleapis.com/v1/projects/medwiseai/serviceAccounts/medwiseai@appspot.gserviceaccount.com:testIamPermissions had HTTP Error: 503, Policy checks are unavailable.","status":503}
+[info] 
+[info] === Deploying to 'medwiseai'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2025-06-12T18:20:41.139Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:41.139Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:41.139Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-06-12T18:20:41.139Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T18:20:45.121Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com 503
+[debug] [2025-06-12T18:20:45.121Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-06-12T18:20:45.122Z] Unable to check that https://cloudresourcemanager.googleapis.com is enabled on medwiseai. Calls to it will fail if it is not enabled
+[debug] [2025-06-12T18:20:45.122Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:45.122Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:45.122Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai [none]
+[debug] [2025-06-12T18:20:46.465Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai 200
+[debug] [2025-06-12T18:20:46.466Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/medwiseai {"projectNumber":"758655856472","projectId":"medwiseai","lifecycleState":"ACTIVE","name":"MedWiseAI","labels":{"monospace-workspace-id":"studio-1145763673","firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-11T19:15:55.784315Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-06-12T18:20:46.467Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:46.467Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:46.467Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:46.467Z] Checked if tokens are valid: true, expires at: 1749756026061
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-06-12T18:20:46.468Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:46.468Z] Checked if tokens are valid: true, expires at: 1749756026061
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-06-12T18:20:46.468Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:46.468Z] Checked if tokens are valid: true, expires at: 1749756026061
+[debug] [2025-06-12T18:20:46.468Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-06-12T18:20:46.468Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T18:20:46.469Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-06-12T18:20:46.469Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T18:20:46.470Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudbuild.googleapis.com [none]
+[debug] [2025-06-12T18:20:46.470Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudbuild.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T18:20:46.471Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/artifactregistry.googleapis.com [none]
+[debug] [2025-06-12T18:20:46.471Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/artifactregistry.googleapis.com x-goog-quota-user=projects/medwiseai
+[debug] [2025-06-12T18:20:48.329Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com 503
+[debug] [2025-06-12T18:20:48.329Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com [omitted]
+[error] 
+[error] Error: Request to https://serviceusage.googleapis.com/v1/projects/medwiseai/services/cloudfunctions.googleapis.com had HTTP Error: 503, Visibility check was unavailable. Please retry the request and contact support if the problem persists
+[debug] [2025-06-12T18:20:48.641Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 503,
+      "message": "Visibility check was unavailable. Please retry the request and contact support if the problem persists",
+      "status": "UNAVAILABLE"
+    }
+  },
+  "response": {
+    "statusCode": 503
+  }
+}
